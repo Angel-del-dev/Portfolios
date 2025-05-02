@@ -30,6 +30,7 @@ body {
 }
 
 nav {
+    z-index: 10;
     width: 100%;
     height: 10vmin;
     background-color: var(--header-color);
@@ -152,6 +153,7 @@ h2.sub-title {
     height: 25vmin;
     background-color: var(--header-color);
     border-radius: 5px;
+    position: relative;
 }
 
 #gallery > .project > img {
@@ -166,6 +168,46 @@ h2.sub-title {
     cursor: pointer;
 }
 
+.project > .description {
+    width: 100%;
+    height: 100%;
+    background-color: #242124;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity .5s linear;
+    color: white;
+    display: flex; justify-content: center; align-items: center;
+    flex-direction: column; gap: 5px;
+    padding: 5px;
+}
+
+#gallery > .project:hover .description {
+    opacity: 1;
+}
+
+.project > .description > .tag {
+    width: 100%;
+    color: red;
+    flex-wrap: wrap;
+    font-size: .8rem;
+    text-align: center;
+}
+
+.project > .description > h2 {
+    text-align: center;
+}
+
+.project > .description > a,
+.project > .description > a:visited {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+}
 .d-none {
     display: none !important;
 }
@@ -182,6 +224,10 @@ h2.sub-title {
 }
 
 @media only screen and (max-width: 600px) {
+    #gallery {
+        justify-content: center;
+    }
+
     #project-showcase {
         flex-direction: column;
     }
