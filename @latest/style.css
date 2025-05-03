@@ -25,7 +25,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -38,6 +39,12 @@ nav {
     top: 0;
     justify-content: flex-start;
     gap: 10px;
+    padding: 0 2vmin;
+}
+
+nav > a > img {
+    height: 10vmin;
+    object-fit: contain;
 }
 
 nav,
@@ -74,12 +81,25 @@ nav > a:not(:first-of-type):hover {
     color: white;
 }
 
+.triangle-down {
+    width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #555;
+}
+
 #home {
     color: white;
     background-color: #171717;
-    display: flex; justify-content: center; align-items: center;
+    display: flex; justify-content: center; align-items: center; 
+    flex-direction: column; gap: 10px;
     width: 100%; height: 100svh;
     font-size: 3rem;
+}
+
+#home .triangle-down {
+    margin-top: 10vmin;
 }
 
 #about {
@@ -212,6 +232,132 @@ h2.sub-title {
     display: none !important;
 }
 
+code {
+    color: salmon;
+    background-color: #242124;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#experience {
+    padding: 10px;
+}
+
+#experience-container {
+    width: 100%;
+    display: flex; justify-content: center; align-items: center;
+    gap: 10px; flex-direction: column;
+    color: white;
+}
+
+#experience-container .job {
+    padding: 10px;
+    display: flex; justify-content: flex-end; align-items: center;
+    flex-direction: row; gap: 5px;
+    width: 50svw;
+    transition: background-color .5s linear;
+}
+
+#experience-container .job:hover {
+    background-color: #242124;
+}
+
+.job > span {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.job > .details {
+    width: 60vmin;
+    padding: 10px;
+    display: flex; justify-content: center; align-items: flex-start;
+    flex-direction: column; gap: 5px;
+}
+
+.job > .details > .name {
+    text-align: right;
+    width: 100%;
+}
+
+.job > .details > .tags {
+    width: 100%;
+    display: flex; justify-content: flex-start; align-items: flex-start;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.job > .details > .tags > [class*="tag"] {
+    padding: 5px; border-radius: 5px;
+    font-size: .8rem;
+}
+
+.tags > .tag-orange {
+    background-color: #ED944D;
+    color: black;
+}
+
+.tags > .tag-yellow {
+    background-color: #EDD94C;
+    color: black;
+}
+
+.tags > .tag-green {
+    background-color: #48A14D;
+    color: white;
+}
+
+.tags > .tag-blue {
+    background-color: #6577B3;
+    color: white;
+}
+
+.tags > .tag-purple {
+    background-color: #8658A5;
+    color: white;
+}
+
+.tags > .tag-white {
+    background-color: #FDFBF9;
+    color: black;
+}
+
+.tags > .tag-brown {
+    background-color: #BB8D6F;
+    color: white;
+}
+
+.tags > .tag-red {
+    background-color: #B33F40;
+    color: white;
+}
+
+.tags > .tag-gray {
+    background-color: #A5A5A8;
+    color: white;
+}
+
+#home h1.title {
+    align-items: center;
+}
+
+.up-down-shift {
+    animation: updownshift 1.2s linear infinite;
+}
+
+@keyframes updownshift {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(0, 10px);
+    }
+}
+
 @media only screen and (max-width: 850px) and (min-width: 600px) {
     #gallery {
         padding: 10px;       
@@ -220,6 +366,11 @@ h2.sub-title {
         min-width: 25vmin;
         max-width: 25vmin;
         height: 20vmin;
+    }
+
+    #experience-container .job {
+        width: 100%;
+        padding: 5px;
     }
 }
 
@@ -235,5 +386,18 @@ h2.sub-title {
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+
+    #experience-container .job {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #experience-container .job > span:first-of-type {
+        font-size: .5rem;
+    }
+
+    nav > a:not(:first-of-type) {
+        width: fit-content;
     }
 }

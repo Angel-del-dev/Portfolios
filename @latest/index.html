@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>angelnovo.es</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../assets/img/logo/angelnovo-nobackground.png" type="image/x-icon">
     <script src="./index.js" type="module" defer></script>
 </head>
 <body>
     <main id="root">
         <section id="home">
-            TODO PRESENTATION
+            <h1 class="title">Hi, I'm Angel</h1>
+            <h2 class="sub-title">And I am a <code>software developer</code></h2>
+            <a class="triangle-down up-down-shift" href="#projects"></a>
         </section>
         <nav>
-            <a href="#home">Angel novo</a>
+            <a href="#home"><img src="../assets/img/logo/angelnovo-nobackground.png" alt="Angel novo logo"></a>
             <a href="#home">HOME</a>
             <a href="#projects">SHOWCASE</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#experience">EXPERIENCE</a>
         </nav>
         <section id="projects">
             <h1 class="title">Project showcase</h1>
             <h2 class="sub-title">Hover to reveal more information</h2>
             <div id="project-showcase">
+                <!-- TODO Add a page for the projects -->
                 <div id="project-filters">
                     <span type="*" class="active">All</span>
                     <span type="backend">Backend</span>
@@ -32,7 +35,7 @@
                 </div>
                 <div id="gallery">
                     <div class="project" tag="backend">
-                        <img src="../assets/img/media.cosasdns.com.png" alt="Media managing api service">
+                        <img src="../assets/img/projects/media.cosasdns.com.png" alt="Media managing api service">
                         <div class="description">
                             <div class="tag">@backend</div>
                             <h2>Media api</h2>
@@ -40,7 +43,7 @@
                         </div>
                     </div>
                     <div class="project" tag="backend,frontend,fullstack">
-                        <img src="../assets/img/database-manager.png" alt="Database manager">
+                        <img src="../assets/img/projects/database-manager.png" alt="Database manager">
                         <div class="description">
                             <div class="tag">@backend,frontend,fullstack</div>
                             <h2>Database manager</h2>
@@ -48,7 +51,7 @@
                         </div>
                     </div>
                     <div class="project" tag="contribution">
-                        <img src="../assets/img/official-v-logo.png" alt="Contributed to vlang's official website">
+                        <img src="../assets/img/projects/official-v-logo.png" alt="Contributed to vlang's official website">
                         <div class="description">
                             <div class="tag">@contribution</div>
                             <h2>V Website</h2>
@@ -56,7 +59,7 @@
                         </div>
                     </div>
                     <div class="project" tag="backend">
-                        <img src="../assets/img/gravityV2.png" alt="Minimal php framework">
+                        <img src="../assets/img/projects/gravityV2.png" alt="Minimal php framework">
                         <div class="description">
                             <div class="tag">@backend</div>
                             <h2>Gravity V2</h2>
@@ -64,7 +67,7 @@
                         </div>
                     </div>
                     <div class="project" tag="native">
-                        <img src="../assets/img/achilles-video-player.png" alt="Video player">
+                        <img src="../assets/img/projects/achilles-video-player.png" alt="Video player">
                         <div class="description">
                             <div class="tag">@native</div>
                             <h2>Achilles video player</h2>
@@ -74,8 +77,69 @@
                 </div>
             </div>
         </section>
-        <section id="about">
-            TODO ABOUT
+        <section id="experience">
+            <h1 class="title">Experience</h1>
+            <div id="experience-container">
+                <div class="job">
+                    <span>mar. <code>2021</code> - may. <code>2021</code></span>
+                    <div class="details">
+                        <span class="name"><code>Internship</code>, Click to travel</span>
+                        <span class="description">
+                            Helped <span class="underline">migrating</span> the main application to newer versions
+                            whilst <span class="underline">fixing broken dependencies</span>.
+                        </span>
+                        <div class="tags">
+                            <div class="tag-orange">PHP</div>
+                            <div class="tag-yellow">Mysql</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="job">
+                    <span>nov. <code>2021</code> - jul. <code>2022</code></span>
+                    <div class="details">
+                        <span class="name"><code>Junior web developer</code>, Click to travel</span>
+                        <span class="description">
+                            Added <span class="underline">custom analytics</span> and changed the main application to render <span class="underline">dynamic content</span> based on
+                            the users navigation through the website.
+                            <br /><br />
+                            Improved and updated a new application to help hotels monitorize their sales.
+                        </span>
+                        <div class="tags">
+                            <div class="tag-orange">PHP</div>
+                            <div class="tag-yellow">Mysql</div>
+                            <div class="tag-green">Jquery</div>
+                            <div class="tag-purple">Bootstrap</div>
+                            <div class="tag-blue">Css</div>
+                            <div class="tag-white">Plotly</div>
+                            <div class="tag-brown">Chart.js</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="job">
+                    <span>jul. <code>2022</code> - <code>currently</code></span>
+                    <div class="details">
+                        <span class="name"><code>Software developer</code>, Microland keyworks</span>
+                        <div class="description">
+                            <span class="underline">Building libraries</span> instead of loading third parties to better suit the needs.
+                            <br /><br />
+                            <span class="underline">Creating file parsers</span> of all kinds and <span class="underline">Shipping barcode/qr scanner</span> applications
+                            following the standard.
+                            <br /><br />
+                            Developing <span class="underline">B2B</span> solutions and <span class="underline">on demand applications</span>.
+                        </div>
+                        <div class="tags">
+                            <div class="tag-orange">PHP</div>
+                            <div class="tag-yellow">Firebird</div>
+                            <div class="tag-green">Js</div>
+                            <div class="tag-blue">Css</div>
+                            <div class="tag-red">Delphi</div>
+                            <div class="tag-gray">Adobe embed api</div>
+                            <div class="tag-gray">Pdf-lib.js</div>
+                            <div class="tag-white">Plotly</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>
