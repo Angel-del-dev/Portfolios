@@ -345,7 +345,7 @@ code {
 }
 
 .up-down-shift {
-    animation: updownshift 1.2s linear infinite;
+    animation: updownshift 1s linear infinite alternate;
 }
 
 @keyframes updownshift {
